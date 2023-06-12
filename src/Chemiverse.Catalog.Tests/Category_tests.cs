@@ -32,7 +32,20 @@ namespace Chemiverse.Catalog.Tests
 		
 			category.Rename(expectedNewName);
 			Assert.Equal(expectedNewName, category.Name);
+		}
 
+		[Fact] 
+		public void when_Add_subcategory_then_subcategory_created()
+		{
+			var id = Guid.NewGuid();
+			var name = "abcddcvcvdll";
+			var category = Category.Add(Guid.NewGuid(), "abecadlo");		
+
+			var subcategory = category.AddSubcategory(id, name);
+
+			Assert.Equal(category.Id, subcategory.ParentId);
+			Assert.Equal(id, subcategory.Id);
+			Assert.Equal(name, subcategory.Name);
 		}
 	}
 }

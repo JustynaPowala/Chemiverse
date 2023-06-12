@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chemiverse.WebApi", "Chemiv
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chemiverse.WebUi", "Chemiverse.WebUi\Chemiverse.WebUi.csproj", "{E0475DFB-7FFD-4487-A1A9-BB985F8292E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chemiverse.Catalog.Domain", "Chemiverse.Catalog.Domain\Chemiverse.Catalog.Domain.csproj", "{8A6F9A80-A6C2-4628-9269-112DA5A65BFA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chemiverse.Catalog.Domain", "Chemiverse.Catalog.Domain\Chemiverse.Catalog.Domain.csproj", "{8A6F9A80-A6C2-4628-9269-112DA5A65BFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chemiverse.Catalog.Application", "Chemiverse.Catalog.Application\Chemiverse.Catalog.Application.csproj", "{658828CC-A5C8-433D-B2EB-5EDF5E6CF5DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chemiverse.Catalog.Application", "Chemiverse.Catalog.Application\Chemiverse.Catalog.Application.csproj", "{658828CC-A5C8-433D-B2EB-5EDF5E6CF5DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chemiverse.Catalog.Tests", "Chemiverse.Catalog.Tests\Chemiverse.Catalog.Tests.csproj", "{ACFD5C40-669A-47DC-8870-09FB69870B90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chemiverse.Catalog.Tests", "Chemiverse.Catalog.Tests\Chemiverse.Catalog.Tests.csproj", "{ACFD5C40-669A-47DC-8870-09FB69870B90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chemiverse.Catalog.Infrastructure", "Chemiverse.Catalog.Infrastructure\Chemiverse.Catalog.Infrastructure.csproj", "{62742069-072D-46D7-8AF4-D087EA653DE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{ACFD5C40-669A-47DC-8870-09FB69870B90}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACFD5C40-669A-47DC-8870-09FB69870B90}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACFD5C40-669A-47DC-8870-09FB69870B90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62742069-072D-46D7-8AF4-D087EA653DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62742069-072D-46D7-8AF4-D087EA653DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62742069-072D-46D7-8AF4-D087EA653DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62742069-072D-46D7-8AF4-D087EA653DE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

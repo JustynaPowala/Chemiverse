@@ -15,6 +15,7 @@ namespace Chemiverse.Catalog.Domain
 		}
 		public Guid Id { get; private set; }	
 		public string Name { get; private set; }
+		public Guid ParentId { get; private set; }
 
 		public static Category Add(Guid id, string name)
 		{
@@ -28,5 +29,12 @@ namespace Chemiverse.Catalog.Domain
 		{
 			Name = newName;
 		}
+
+		public Category AddSubcategory(Guid id, string name)
+		{	
+			var subcategory = Add(id, name);
+			subcategory.ParentId = Id;
+			return subcategory;
+		} 
 	}
 }
