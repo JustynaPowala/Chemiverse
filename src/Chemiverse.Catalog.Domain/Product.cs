@@ -3,6 +3,7 @@
 	public class Product
 	{
 		private List<ProductNumericProperty> _numericProperties = new List<ProductNumericProperty>();
+		private List<ProductTextProperty> _textProperties = new List<ProductTextProperty>();
 		protected Product()
 		{
 
@@ -12,6 +13,7 @@
 		public string Description { get; private set; }	
 		public Guid CategoryId { get; private set;}
 		public IReadOnlyList<ProductNumericProperty> NumericProperties => _numericProperties;
+		public IReadOnlyList<ProductTextProperty> TextProperties => _textProperties;
 		
 
 		public static Product Introduce(Guid id, string name)
@@ -46,8 +48,21 @@
 			else
 			{
 				productNumericProperty.ChangeValue(value);
+			}		
+		}
+
+		public void AssignProperty(TextProperty property, string value)
+		{
+			var productTextProperty = _textProperties.FirstOrDefault(p=>p.PropertyId == property.Id);
+			if(productTextProperty == null)
+			{
+				productTextProperty = ProductTextProperty.Create(property.Id, value);
+				_textProperties.Add(productTextProperty);
 			}
-			
+			else
+			{
+				productTextProperty.ChangeValue(value);
+			}
 		}
 	}
 }

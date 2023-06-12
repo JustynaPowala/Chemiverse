@@ -62,7 +62,7 @@ namespace Chemiverse.Catalog.Tests
 		}
 
 		[Fact]
-		public void given_product_with_property_when_the_same_property_assigned_with_different_value_then_value_of_that_property_changed()
+		public void given_product_with_numeric_property_when_the_same_property_assigned_with_different_value_then_value_of_that_property_changed()
 		{
 			//given
 			var product = Product.Introduce(Guid.NewGuid(), "abecadlo");
@@ -75,6 +75,22 @@ namespace Chemiverse.Catalog.Tests
 			//then
 			Assert.Contains(product.NumericProperties, p => p.Value == 24 && p.PropertyId == numericProperty.Id);
 			Assert.DoesNotContain(product.NumericProperties, p => p.Value == 23 && p.PropertyId == numericProperty.Id);
+		}
+
+		[Fact]
+		public void given_product_with_text_property_when_the_same_property_assigned_with_different_value_then_value_of_that_property_changed()
+		{
+			//given
+			var product = Product.Introduce(Guid.NewGuid(), "abecadlo");
+			var textProperty = TextProperty.Define(Guid.NewGuid(), "fffffffffffffffff");
+			product.AssignProperty(textProperty, "23");
+
+			//when
+			product.AssignProperty(textProperty, "24");
+
+			//then
+			Assert.Contains(product.TextProperties, p => p.Value == "24" && p.PropertyId == textProperty.Id);
+			Assert.DoesNotContain(product.TextProperties, p => p.Value == "23" && p.PropertyId == textProperty.Id);
 		}
 	}
 }
